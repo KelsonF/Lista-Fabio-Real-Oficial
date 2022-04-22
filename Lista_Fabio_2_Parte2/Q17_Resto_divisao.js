@@ -6,14 +6,14 @@ function main(){
 
     const resultado = operacao(valor1,valor2)
 
-    print(`Reultado:${resultado}`)
+    print(`Reultado: ${resultado}`)
 }
 function operacao(v1,v2){
     if(v1 % v2 === 1){
         return ((v1 + v2)+1)
     }
     else if(v1 % v2 === 2){
-        if(v1%2 === 2 && v2%2 === 2){
+        if(v1%2 === 0 && v2%2 === 0){
             return "Sao pares"
         }
         else{
@@ -27,7 +27,7 @@ function operacao(v1,v2){
         return ((v1 + v2)/v2)
     }
     else{
-       return (v1**2),(v2**2)
+        return[v1**2,v2**2]
     }
 }
 main()
