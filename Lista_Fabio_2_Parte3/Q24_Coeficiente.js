@@ -9,8 +9,8 @@ function main(){
     const resultado = calculo_raizes1(A,B,C)
     const resultado2 = calculo_raizes2(A,B,C)
 
-    print(resultado.toFixed(0))
-    print(resultado2.toFixed(0))
+    print(resultado.toFixed(2))
+    print(resultado2.toFixed(2))
 }
 function calculo_raizes1(A,B,C){
     const delta = ((B*B) - (4*A*C))
