@@ -6,15 +6,15 @@ import  {loadfile} from './ler_arquivos.js'
 const input = prompt()
 
 function main(){
-    let menu = '**** ROGERPLAY ****'
+    let menu = '**** KELSON`S PROGRAM ****'
     menu += '\n1 - Palavras com mais de N letras'
     menu += '\n2 - Mostrar e Contar palavras sem uma determinada letra'
-    menu += '\n3 - Upgrade de plano'
+    menu += '\n3 - Teste de palavras com letras proibidas'
     menu += '\n\n0 - Sair'
 
     const palavras = loadfile().split('\n')
 
-    console.log(`${palavras.length} carregadas!`)
+    console.log(`${palavras.length} palavras carregadas!`)
 
     console.log(menu)
     let opcao = Number(input())
@@ -24,6 +24,11 @@ function main(){
         }else if (opcao === 2){
             has_no_e(palavras)
         }else if (opcao === 3){
+            avoids(palavras)
+        }else if(opcao === 4){
+
+        }
+        else if(opcao === 5){
             
         }
 
@@ -44,24 +49,23 @@ function palavras_com_mais_20_letras(palavras){
         }
     }
     const percentual = Number(contador/palavras.length)*100
-    console.log(`Existem ${contador} com mais de 20 letras, que correspondem a ${percentual.toFixed(3
-        )} do total de palavras`)
+    console.log(`Existem ${contador} com mais de 20 letras, que correspondem a ${percentual.toFixed(3)} do total de palavras`)
 }
 function has_no_e(palavras){
+    const letter = input('Digite a letra desejada: ')
     let contador = 0
-    for(let palavra of palavras){
-        if(has_no_letter){
+    for (let palavra of palavras){
+        if (has_no_letter(palavras,letter)){
             console.log(palavra)
             contador++
         }
-    }
-    const percentual = (contador/palavra)*100
-    Console.log(`O numero de palavras sem a letra "e" eh igual a ${contador}, que corresponde a ${percentual.toFixed(2)} %`)
+    } 
+    const porcentagem = (contador/palavras.length)*100
+    console.log(`O numero de palavras sem a letra 'e' corresponde a ${porcentagem} % do total (${contador}) `)
 }
-
-function has_no_letter(palavras){
-    for(let letter of palavras){
-        if(letter === "e"){
+function has_no_letter(palavra,letter){
+    for (let letra of palavra){
+        if (letra === letter){
             return false
         }
     }
