@@ -5,14 +5,18 @@ function main(){
     const quantidade_desejada = Number(input('Quantos quilos voce deseja: '))
     const tipo_pagamento = input('Digite seu tipo de pagamento (C-cartao de credito; D-dinheiro): ')
 
-    const resultado = desconto_cartao(tipo_carne,quantidade_desejada,tipo_pagamento)
+    const resultado = desconto(tipo_carne,quantidade_desejada,tipo_pagamento)
+    const resultado2 = calcular_desconto(tipo_carne,quantidade_desejada)
 
-    print(resultado)
+    print(`Carne Escolhida: ${tipo_carne}`)
+    print(`Quantidade desejada: ${quantidade_desejada}`)
+    print(`Valor do desconto: ${resultado2}`)
+    print(`Valor Pago: ${resultado}`)
 }
 main()
 
 function pagamento(carne,quantidade_desejada){
-    if(carne = 'F'){
+    if(carne === 'F'){
         if(quantidade_desejada <= 5){
             return (quantidade_desejada * 4.90)
         }
@@ -40,13 +44,25 @@ function pagamento(carne,quantidade_desejada){
     }
 }
 
-function desconto_cartao(carne,quantidade_desejada,pagamento){
+function desconto(carne,quantidade_desejada,tipo_pagamento){
     const valor = pagamento(carne,quantidade_desejada)
+    const desconto = calcular_desconto(carne,quantidade_desejada)
 
-    if(pagamento === 'C'){
-        return (valor - (valor/10))
+    if(tipo_pagamento === 'C'){
+        return (valor - desconto)
     }
     else{
-        valor
+        return valor
+    }
+}
+
+function calcular_desconto(carne,quantidade_desejada,pagamento){
+    const valor = pagamento(carne,quantidade_desejada)
+    const desconto = valor * (5/100)
+    if(pagamento === 'C'){
+        return desconto
+    }
+    else{
+        return 0
     }
 }
