@@ -1,28 +1,47 @@
 import { input,print } from "../io_utils.js";
 
 function main(){
-    var lista = []
-    var num1 = input("Digite um numero")
-    var num2 = input("Digite um numero")
-    
-    while(maior(num1,num2) % menor(num1,num2) != 0){
-        num1 = num2
-        num2 = Number(input("Digite um numero"))
-        lista.push(num2)
+    let numb1 = Number(input('Digite um numero inteiro: '))
+    let numb2 = Number(input('Digite um numero inteiro: '))
+    let numeros = [numb1,numb2]
+
+    while(maior(numb1,numb2) % menor(numb1,numb2) !== 0){
+        numb1 = numb2
+        numb2 = input("Digite um numero inteiro: ")
+        numeros.push(numb2)
     }
 
-    let pares = 0
-    let impars = 0 
-    let positivos = 0
-    let negativos = 0
-}
-function maior(n1,n2){
-    return Math.max(n1,n2)
-}
-function menor(n1,n2){
-   return Math.min(n1,n2)
-}
-function ehpar(n2){
-    
+    let par = 0
+    let impar = 0
+    let positivo = 0
+    let negativos = 0   
+
+    for (let iten of numeros){
+        if(iten % 2 === 0)par++
+        else impar++
+        if(iten > 0) positivo++
+        else negativos++    
+    }
+    print(`PARES: ${par}`)
+    print(`IMPAR: ${impar}`)
+    print(`POSITIVO: ${positivo}`)
+    print(`NEGATIVO: ${negativos}`)
 }
 main()
+function menor(v1,v2){
+    if(v1<v2){
+        return v1
+    }
+    else{
+        return v2
+    }
+}
+    function maior(v1,v2){
+        if(v1>v2){
+            return v1
+        }
+        else{
+            return v2
+        }
+    
+}

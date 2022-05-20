@@ -1,20 +1,23 @@
 import { input,print } from "../io_utils.js";
 
 function main(){
-    const numero = (input('Digite um numero: '))
+    const numero = Number(input('Digite um numero: '))
 
     const resultado = analise(numero)
-
-    print(resultado)
+    
+    if(resultado){
+        print("Numero inteiro")
+    }
+    else[
+        print("Numero float")
+    ]
 }
 function analise(n){
-    for(let item of n){
-        if(item == "."){
-            return 'Float'
-        }
-        else{
-            return 'Inteiro'
-        }
+    if(n % 1 === 0){
+        return true
+    }
+    else{
+        return false
     }
 }
 main()
