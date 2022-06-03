@@ -6,7 +6,7 @@ function main(){
 
     const imc_usuario = calcular_Imc(peso,altura)
 
-    console.log(imc_usuario)
+    console.log(imc_usuario.toFixed(2))
 }
 function calcular_Imc(p,a){
     return (p/a**2)
