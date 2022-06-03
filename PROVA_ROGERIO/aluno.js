@@ -5,7 +5,7 @@ function main(){
     const dados_aluno = loadfile().split('\n')
     print(dados_aluno)
 
-    let total_de_alunos = 0
+    let total_de_alunos = dados_aluno.length
     let media_aluno
     let media_turma
 
@@ -37,13 +37,13 @@ function main(){
         presenca = itens[4].split("/")
         faltas = presenca[0]
         aulas_totais = presenca[1]
-        percentual_falta = faltas / aulas_totais * 100
+        percentual_falta = (faltas / aulas_totais) * 100
         
         media_aluno = calcular_media(nota1,nota2,nota3)
 
         print(`Aluno: ${nome}`)
         print(`Media Aluno: ${media_aluno.toFixed(2)}`)
-        if(reprovado_falta(percentual_falta.toFixed(2))){
+        if(reprovado_falta(percentual_falta)){
             print('Reprovado por falta')
             reprovados_faltas++
         }
