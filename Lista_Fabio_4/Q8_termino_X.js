@@ -8,11 +8,11 @@ function main(){
     let atual = Number(input("Numero: "))
     let subsequente = Number(input("Numero: "))
 
-    while(atual + subsequente !== X){
+    while((atual + subsequente) !== X){
         atual = subsequente
         subsequente = Number(input("Numero: "))
 
-        lista.push(atual,subsequente)
+        lista.push(atual)
     }
     print(lista)
 }
