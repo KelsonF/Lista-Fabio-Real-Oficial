@@ -12,35 +12,22 @@ function main(){
     let pontuacao_jogador_1 = 0;
     let pontuacao_jogador_2 = 0;
 
-    while(pontuacao_jogador_1 <= 21 || pontuacao_jogador_2 <= 21){
-
-        if(pontuador === 1){
-            pontuacao_jogador_1++
-        }
-        else if(pontuador === 2){
-            pontuacao_jogador_2++
-        }
-
-    pontuador = Number(input('Quem pontuou (1 ou 2): '));
-        if(!empate(pontuacao_jogador_1,pontuacao_jogador_2)){
-            if(pontuacao_jogador_1 === 21){
-                print(`Jogador 1 venceu`)
-                print(`Pontuacao: ${pontuacao_jogador_1}`)
-            }
-            else if(pontuacao_jogador_2 === 21){
-                print(`Jogador 2 venceu`)
-                print(`Pontuacao: ${pontuacao_jogador_2}`)
-            }
-
-
-        }
-
-    }
+  
 }
 main()
 
-function empate(valor1, valor2){
-    if(valor1 === 20 && valor2 === 20){
-        
-    }
+function ganhador(valor1, valor2) {
+    if(valor1 > 21 || valor2 > 21){
+        if(valor1 - valor2 ===2 || valor2 - valor1 === 2){
+            return true
+        }
+    }else if(valor1 === 21 || valor2  ===21){
+        if((valor1-valor2 >=2) || (valor2 - valor1 >= 2)){
+            return true
+        }
+    } 
+
+    return false
 }
+
+main()
