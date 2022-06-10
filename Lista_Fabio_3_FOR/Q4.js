@@ -5,7 +5,7 @@ function main(){
     let limite = Number(input("Digite o limite de sua PA: "))
     const R = Number(input("Digite a razao de crescimento de sua PA: "))
 
-    for(let i = Ao; i <= limite; i+=R){
+    for(let i = Ao; i < limite; i *= R){
         print(`Valores: ${i}`)
     }
 }
