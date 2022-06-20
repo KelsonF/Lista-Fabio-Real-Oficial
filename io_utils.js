@@ -12,10 +12,6 @@ export function numero(lista_numero){
     return Number(input(lista_numero))
 }
 
-export function texto(string){
-    return input(string)
-}
-
 function vetor(tamanho_vetor){
     return new Array(tamanho_vetor)
 }
