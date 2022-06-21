@@ -12,7 +12,7 @@ export function numero(lista_numero){
     return Number(input(lista_numero))
 }
 
-function vetor(tamanho_vetor){
+export function vetor(tamanho_vetor){
     return new Array(tamanho_vetor)
 }
 
@@ -25,4 +25,23 @@ export function eh_numero(elemento){
         }
     }
     return false
+}
+
+export function fibonacci(valor){
+    const arrayFibonacci = new Array(valor);
+    let soma = 0
+    let anterior = 0
+    let atual = 1
+    let j = 0
+
+    for(let i = 0; i < arrayFibonacci.length; i++){
+        soma = anterior + atual
+        arrayFibonacci[j] = anterior
+        anterior = atual
+        atual = soma
+
+        j++
+    }
+
+    return arrayFibonacci
 }

@@ -10,8 +10,9 @@ function main(){
             numero++
         }
         print(`${numero} X ${multiplicador} = ${op}`)
-    multiplicador++
-    op = numero * multiplicador
+
+        multiplicador++
+        op = numero * multiplicador
     }
 }
 main()
