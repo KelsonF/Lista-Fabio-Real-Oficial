@@ -1,9 +1,11 @@
-
+import { numero, preencher_vetor, vetor } from './io_utils.js'
 
 function main(){
-    let vetor = [1,2,3,4,5]
+    let tamanhoVetor = numero("Tamanho: ")
+    let criar_vetor = vetor(tamanhoVetor)
+    let array = preencher_vetor(criar_vetor)
 
-    const vetor_ordenado = ordenar_vetor_bubble(vetor)
+    const vetor_ordenado = ordenar_vetor_bubble(array)
 
     console.log(vetor_ordenado)
 }
