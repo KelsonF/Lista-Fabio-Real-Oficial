@@ -45,3 +45,33 @@ export function fibonacci(valor){
 
     return arrayFibonacci
 }
+
+export function preencher_vetor(vetor){
+    for(let i = 0; i < vetor.length; i++){
+        vetor[i] = Number(input("Valor: "))
+
+    }
+
+    return vetor
+}
+
+export function ordenar_vetor_bubble(vetor){
+    let tamanho = vetor.length;
+    let auxiliar;
+    let k = 0;
+
+    for (let i = 0; i < tamanho - 1; i++) {
+        for (let j = 0; j < tamanho - 1 - k; j++) {
+            if(vetor[j] > vetor[j + 1]){
+                auxiliar = vetor[j]
+                vetor[j] = vetor[j + 1]
+                vetor[j + 1] = auxiliar
+            }
+            
+        }
+    
+        k++
+    }
+
+    return vetor
+}

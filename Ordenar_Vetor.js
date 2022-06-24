@@ -1,16 +1,33 @@
-import {vetor, numero} from "./io_utils.js"
+
 
 function main(){
-    const N = numero("Numero: ")
-    let array = vetor(N)
+    let vetor = [1,2,3,4,5]
 
-    let menor = 0
+    const vetor_ordenado = ordenar_vetor_bubble(vetor)
 
-    for (let i = 0; i < array.length ; i++) {
-        array[i] = numero("Numero: ")    
+    console.log(vetor_ordenado)
+}
+
+function ordenar_vetor_bubble(vetor){
+    let tamanho = vetor.length;
+    let auxiliar;
+    let k = 0;
+
+    for (let i = 0; i < tamanho - 1; i++) {
+        for (let j = 0; j < tamanho - 1 - k; j++) {
+            if(vetor[j] > vetor[j + 1]){
+                auxiliar = vetor[j]
+                vetor[j] = vetor[j + 1]
+                vetor[j + 1] = auxiliar
+            }
+            
+        }
+    
+        k++
     }
 
-    console.log(array)
+    return vetor
 }
+
 
 main()

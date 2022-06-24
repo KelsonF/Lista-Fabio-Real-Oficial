@@ -2,7 +2,6 @@ import { input,print } from "../io_utils.js";
 
 function main(){
     const tamanho = Number(input("Tamanho do vetor= "))
-
     const vetor_a = new Array(tamanho)
     
     for (let index = 0; index < vetor_a.length; index++) {
