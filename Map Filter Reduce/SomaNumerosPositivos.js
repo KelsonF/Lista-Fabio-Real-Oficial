@@ -1,4 +1,4 @@
-import { preencher_vetor, vetor } from '../io_utils.js'
+import { preencher_vetor, vetor } from '../io_utils_vetor.js'
 
 function main(){
     const novoArray = vetor(7)
