@@ -1,7 +1,25 @@
 import { input } from './io_utils.js'
 
-export function vetor(tamanho_vetor){
-    return new Array(tamanho_vetor)
+export function criar_vetor(tamanho_vetor){
+    let vetor = new Array(tamanho_vetor);
+
+    for(let i = 0; i < vetor.length; i++){
+        vetor[i] = Number(input("Valor: "));
+
+    }
+
+    return vetor;
+}
+
+export function vetor_aleatorio(tamanho, minimo, maximo){
+    let vetor = new Array(tamanho)
+
+    for (let i = 0; i < vetor.length; i++) {
+        vetor[i] = Math.floor(Math.random() * (maximo - minimo)) + minimo
+        
+    }
+
+    return vetor
 }
 
 export function preencher_vetor(vetor){
@@ -81,4 +99,39 @@ export function mediana_vetor(vetor){
     }
 
     return mediana;
+}
+
+export function resetar_valores(vetor,elemento){
+    let novo_vetor = []
+
+    for(let i = 0; i < vetor.length; i++){
+        novo_vetor[i] = elemento
+    }
+
+    return novo_vetor
+}
+
+export function quantidade_elementos_repetidos(vetor){
+    let contador = 0
+    for(let i = 0; i < vetor.length; i++){
+        if(elemento === vetor[i]){
+            cont++
+        }
+    }
+
+    return contador
+}
+
+export function tamanho_vetor(vetor){
+    return vetor.length;
+}
+
+export function somar_valores_vetor(vetor){
+    let soma = 0
+
+    for(let i = 0; i < vetor.length; i++){
+        soma += vetor[i]
+    }
+
+    return soma
 }
