@@ -10,13 +10,7 @@ function main(){
 }
 
 function eh_par(item){
-    if(item % 2 === 0){
-        return true
-    }
-    else{
-        return false
-    }
-
+    return item % 2 === 0
 }
 
 main()
