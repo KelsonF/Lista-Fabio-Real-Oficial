@@ -1,3 +1,6 @@
+//QUESTAO SENDO ATUALIZADA//
+
+
 import { input, numero } from './io_utils.js';
 import {mostrar_menu} from './show_menu_do_krl.js'
 import { criar_vetor, media_elementos_vetor, 

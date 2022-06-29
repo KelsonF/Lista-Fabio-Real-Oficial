@@ -22,15 +22,6 @@ export function vetor_aleatorio(tamanho, minimo, maximo){
     return vetor
 }
 
-export function preencher_vetor(vetor){
-    for(let i = 0; i < vetor.length; i++){
-        vetor[i] = Number(input("Valor: "))
-
-    }
-
-    return vetor;
-}
-
 export function ordenar_vetor_bubble(vetor){
     let tamanho = vetor.length;
     let auxiliar;
@@ -111,7 +102,7 @@ export function resetar_valores(vetor,elemento){
     return novo_vetor
 }
 
-export function quantidade_elementos_repetidos(vetor){
+export function quantidade_elementos_repetidos(vetor,elemento){
     let contador = 0
     for(let i = 0; i < vetor.length; i++){
         if(elemento === vetor[i]){
@@ -134,4 +125,66 @@ export function somar_valores_vetor(vetor){
     }
 
     return soma
+}
+
+export function maior_e_posicao(vetor){
+    let maior = vetor[0]
+    let pos_maior
+
+    for(let i = 0; i < vetor.length; i++){
+        if(vetor[i] > maior){
+            maior = vetor[i]
+            pos_maior = i
+        }
+    }
+
+    return [maior,pos_maior]
+}
+
+export function menor_e_posicao(vetor){
+    let menor = vetor[0]
+    let pos_menor;
+
+    for (let i = 0; i < array.length; i++) {
+        if(vetor[i] < menor){
+            menor = vetor[i]
+            pos_menor = i
+        }
+        
+    }
+
+    return [menor,pos_menor]
+}
+
+export function positivos_e_quantidade(){
+    let positivos = []
+    let contador = 0
+
+    for (let i = 0; i < array.length; i++) {
+        if(vetor[i] > 0){
+            contador++
+            positivos[contador] = vetor[i]
+        }
+    }
+
+    return [positivos,contador]
+}
+
+export function negativos_e_quantidade(){
+    let negativos = []
+    let contador = 0
+
+    for (let i = 0; i < array.length; i++) {
+        if(vetor[i] < 0){
+            contador++
+            negativos[contador] = vetor[i]
+        }
+    }
+
+    return [negativos,contador]
+}
+
+export function map_vetor(vetor,trabalho){
+    
+
 }
