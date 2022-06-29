@@ -193,3 +193,17 @@ export function map_vetor(vetor,trabalho){
 
     return novo_vetor
 }
+
+export function filter_vetor(vetor,trabalho){
+    let novo_vetor = []
+    let j = 0
+
+    for (let i = 0; i < vetor.length; i++) {
+        if(trabalho(vetor[i])){
+            novo_vetor[j] = vetor[i]
+            j++
+        }
+    }
+
+    return novo_vetor
+}
