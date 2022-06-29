@@ -160,7 +160,7 @@ export function positivos_e_quantidade(){
     let positivos = []
     let contador = 0
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < vetor.length; i++) {
         if(vetor[i] > 0){
             contador++
             positivos[contador] = vetor[i]
@@ -174,7 +174,7 @@ export function negativos_e_quantidade(){
     let negativos = []
     let contador = 0
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < vetor.length; i++) {
         if(vetor[i] < 0){
             contador++
             negativos[contador] = vetor[i]
@@ -187,7 +187,7 @@ export function negativos_e_quantidade(){
 export function map_vetor(vetor,trabalho){
     let novo_vetor = new Array(vetor.length)
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < vetor.length; i++) {
         novo_vetor[i] = trabalho(vetor[i])
     }
 

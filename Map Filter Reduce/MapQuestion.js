@@ -1,25 +1,16 @@
 //Mapear os valores e um array para o seu dobro
-import { preencher_vetor, vetor } from '../io_utils_vetor.js'
+import { criar_vetor, map_vetor } from '../io_utils_vetor.js'
 
 function main(){
-    const newArray = vetor(5)
+    const vetor = criar_vetor(5)
+    console.log(vetor)
 
-    const arrayPreenchido = preencher_vetor(newArray)
-
-    console.table(arrayPreenchido)
-
-    const vetor_mapeado = vetor_dobrado(arrayPreenchido)
-
-    console.table(vetor_mapeado)
+    const vetor_mapeado = map_vetor(vetor,dobrar)
+    console.log(vetor_mapeado)
 }
-function vetor_dobrado(vetor){
 
-    for (let i = 0; i < vetor.length; i++){
-        vetor[i] = vetor[i] * 2
-    }
-
-    return vetor
-
+function dobrar(item){
+    return (item * 2)
 }
 
 main()
