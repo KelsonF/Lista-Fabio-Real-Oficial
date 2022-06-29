@@ -185,6 +185,11 @@ export function negativos_e_quantidade(){
 }
 
 export function map_vetor(vetor,trabalho){
-    
+    let novo_vetor = new Array(vetor.length)
 
+    for (let i = 0; i < array.length; i++) {
+        novo_vetor[i] = trabalho(vetor[i])
+    }
+
+    return novo_vetor
 }
