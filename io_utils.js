@@ -41,3 +41,7 @@ export function fibonacci(valor){
 
     return arrayFibonacci
 }
+
+export function numero_aleatorio(minimo, maximo){
+    return Math.floor(Math.random() * (maximo - minimo)) + minimo
+}
